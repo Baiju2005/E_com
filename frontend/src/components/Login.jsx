@@ -11,7 +11,7 @@ const Login = () => {
         formState: { errors },
     } = useForm()
 
-    // ✅ Function to send data to backend
+  
     const onSubmit = async (data) => {
         try {
             const response = await fetch("http://localhost:5000/api/auth/login", {
@@ -25,11 +25,11 @@ const Login = () => {
             const result = await response.json();
 
             if (response.ok) {
-                // ✅ Store token
+                // Store token
                 localStorage.setItem("token", result.token);
 
                 alert("✅ Login successful!");
-                window.location.href = "/"; // redirect to home or dashboard
+                window.location.href = "/"; 
             } else {
                 alert(result.message || "Invalid email or password");
             }

@@ -15,7 +15,7 @@ const Register = () => {
     console.log("Registration Data Received:", data);
 
     try {
-      const response = await fetch("http://localhost:4000/api/auth/register", {
+      const response = await fetch("http://localhost:5000/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -26,7 +26,7 @@ const Register = () => {
 
       if (response.ok) {
         alert(result.message || "Registration Successful!");
-        reset(); // ✅ Clears form fields
+        reset();
       } else {
         alert(result.message || "Registration Failed!");
       }
@@ -44,7 +44,7 @@ const Register = () => {
       >
         <legend className="fieldset-legend text-3xl">Register</legend>
 
-        {/* Email */}
+
         <label className="label">Email</label>
         <input
           type="email"
@@ -56,7 +56,7 @@ const Register = () => {
           <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
         )}
 
-        {/* Password */}
+
         <label className="label mt-3">Password</label>
         <input
           type="password"
@@ -68,10 +68,10 @@ const Register = () => {
           <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
         )}
 
-        {/* Submit Button */}
+
         <input type="submit" value="Register" className='btn btn-neutral mt-4' />
 
-        {/* Redirect to Login */}
+
         <p className='text-l mt-2'>
           Already have an account?
           <Link to='/login' className='text-blue-500 ml-2 font-bold underline'>

@@ -1,38 +1,41 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Notfound = () => {
-    return (
-        <>
-            <main className="grid min-h-full place-items-center bg-gray-800 px-6 py-24 sm:py-32 lg:px-8">
-                <div className="text-center">
-                    <p className="text-base font-semibold text-gray-400">404</p>
-                    <h1 className="mt-4 text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
-                        Page not found
-                    </h1>
-                    <p className="mt-6 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-                        Sorry, we couldn’t find the page you’re looking for.
-                    </p>
+  return (
+    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-50 to-gray-200 text-center px-4">
 
-                    <div className="mt-10 flex items-center justify-center gap-x-6">
-                        <Link
-                            to="/"
-                            className="rounded-md bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-gray-800 font-bold shadow-xs  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                        >
-                            Go back home
-                        </Link>
+      <img
+        src="/Raju.png"
+        alt="Lost Cartoon"
+        className="w-60 h-60 object-contain mb-6 animate-bounce"
+      />
 
-                        <Link
-                            to="/contact"
-                            className="text-sm font-semibold text-white"
-                        >
-                            Contact support <span aria-hidden="true">&rarr;</span>
-                        </Link>
-                    </div>
-                </div>
-            </main>
-        </>
-    )
-}
 
-export default Notfound
+      <h1 className="text-6xl font-extrabold text-gray-900 mb-4">
+        404 – Page Lost in Space 🚀
+      </h1>
+
+
+      <p className="text-lg text-gray-700 mb-6">
+        Looks like this page went on a coffee break ☕ <br />
+        or maybe it’s debugging itself somewhere in the multiverse!
+      </p>
+
+
+      <p className="italic text-gray-500 mb-8">
+        “Tip: Always console.log before you panic!”
+      </p>
+
+
+      <Link
+        to="/"
+        className="px-6 py-3 bg-gray-900 text-white rounded-lg text-sm font-semibold shadow-md hover:scale-105 transition-transform"
+      >
+        🏠 Back to Safety
+      </Link>
+    </div>
+  );
+};
+
+export default Notfound;

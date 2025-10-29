@@ -12,7 +12,7 @@ const Contact = () => {
     const onSubmit = (data) => {
         console.log("Contact form data:", data);
         alert("Thank you for reaching out! We'll get back to you soon.");
-        reset(); // clear fields
+        reset(); 
     };
 
     return (
@@ -23,7 +23,7 @@ const Contact = () => {
                 </h2>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                    {/* Name */}
+                   
                     <div>
                         <label className="block text-gray-700 mb-1">Name</label>
                         <input
@@ -37,7 +37,7 @@ const Contact = () => {
                         )}
                     </div>
 
-                    {/* Email */}
+                    
                     <div>
                         <label className="block text-gray-700 mb-1">Email</label>
                         <input
@@ -51,7 +51,7 @@ const Contact = () => {
                         )}
                     </div>
 
-                    {/* Message */}
+                  
                     <div>
                         <label className="block text-gray-700 mb-1">Message</label>
                         <textarea
@@ -65,7 +65,7 @@ const Contact = () => {
                         )}
                     </div>
 
-                    {/* Submit Button */}
+                    
                     <input type="submit" value="Submit" className='btn btn-neutral mt-4' />
                 </form>
             </div>

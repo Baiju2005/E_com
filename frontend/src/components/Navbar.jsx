@@ -14,7 +14,7 @@ const Navbar = () => {
     const navItems = (
         <>
             <li><a href='/'>Home</a></li>
-            <li><a href='/Items'>Items</a></li>
+            <li><a href='/Courses'>Courses</a></li>
             <li><a href='/Contact'>Contact</a></li>
             <li><a href='/About'>About</a></li>
         </>
@@ -36,7 +36,7 @@ const Navbar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <a className="text-2xl font-bold pointer">Logo</a>
+                    <a className="text-2xl font-bold pointer">PyBuddy</a>
                 </div>
 
                 <div className="navbar-end space-x-3 flex-grow">
@@ -56,11 +56,10 @@ const Navbar = () => {
                             </svg>
                             <input type="search" className="grow outline-none" placeholder="Search" />
                             <kbd className="kbd kbd-sm">⌘</kbd>
-                            <kbd className="kbd kbd-sm">K</kbd>
                         </label>
                     </div>
 
-                    {/* ✅ Conditionally Render Login / Logout */}
+                    
                     <div className="btn px-6 text-gray-100 bg-gray-900 justify-end cursor-pointer">
                         {token ? (
                             <button onClick={handleLogout}>Logout</button>

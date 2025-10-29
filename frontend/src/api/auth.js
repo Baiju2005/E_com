@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4000/api/auth";
+const BASE_URL = "http://localhost:5000/api/auth";
 
 export const registerUser = async (userData) => {
   try {
@@ -7,9 +7,16 @@ export const registerUser = async (userData) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
     });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Server Error: ${response.status} - ${errorText}`);
+    }
+
     return await response.json();
   } catch (error) {
     console.error("Register Error:", error);
+    return { error: error.message };
   }
 };
 
@@ -25,7 +32,6 @@ export const loginUser = async (userData) => {
     const data = await response.json();
 
     if (!response.ok) {
-      // Throw an error to handle it gracefully in frontend
       throw new Error(data.message || "Login failed");
     }
 

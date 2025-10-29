@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
-import ItemsRoute from "./routes/ItemsRoute";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Notfound from "./routes/Notfound";
 import ContactRoute from "./routes/ContactRoute";
-import ProtectedRoute from "./routes/ProtectedRoute"; // ✅ import
+import ProtectedRoute from "./routes/ProtectedRoute";
+import CourseRoute from "./routes/CourseRoute"; 
 
 const App = () => {
   return (
@@ -16,12 +16,11 @@ const App = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/" element={<Home />} />
 
-      {/* ✅ Protected Routes */}
       <Route
-        path="/items"
+        path="/courses"
         element={
           <ProtectedRoute>
-            <ItemsRoute />
+            <CourseRoute />
           </ProtectedRoute>
         }
       />
