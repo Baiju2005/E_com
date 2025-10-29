@@ -77,7 +77,7 @@ const Banner = () => {
 
                         <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                             <Link
-                                to="/items"
+                                to="/Courses"
                                 className="inline-block px-6 py-3 bg-slate-900 text-white rounded-lg text-sm font-medium shadow hover:opacity-95 transition"
                             >
                                 Browse Courses
