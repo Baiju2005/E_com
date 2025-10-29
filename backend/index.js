@@ -10,7 +10,7 @@ const app = express();
 
 // ✅ CORS middleware
 app.use(cors({
-  origin: "https://pybuddyui.onrender.com", 
+  origin: "https://pybuddy-lilac.vercel.app", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
