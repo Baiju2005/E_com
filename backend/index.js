@@ -10,7 +10,7 @@ const app = express();
 
 // ✅ CORS middleware
 app.use(cors({
-  origin: "http://localhost:5173", 
+  origin: "https://pybuddyui.onrender.com", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
